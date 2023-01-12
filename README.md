@@ -1,3 +1,5 @@
+Blog with Admin panel
+
 Before you start the project, go into the .env 
 Change sqlite to your db
 DB_CONNECTION=sqlite 
@@ -18,5 +20,7 @@ email: reader@example.com
 password: 123
 
 
-When registering a new account you will need to use the mailtrap site to verify and get a password. But before that in the project terminal write <b>php artisan queue:work</b so that the message with verification and password will be sent.
+When registering a new account you will need to use the mailtrap site to verify and get a password. But before that in the project terminal write 
+<b>php artisan queue:work</b>
+so that the message with verification and password will be sent.
 
