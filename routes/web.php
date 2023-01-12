@@ -92,3 +92,5 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin','prefix'=>'admin', 'mi
 //Checks for user verification
 Auth::routes(['verify' => true]);
 
+
+

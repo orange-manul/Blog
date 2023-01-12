@@ -4,10 +4,12 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\User;
 use Carbon\Factory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Post;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,6 +29,19 @@ class DatabaseSeeder extends Seeder
             $tagIds = $tags->random(5)->pluck('id');
             $post->tags()->attach($tagIds);
         }
+
+        User::factory(1)->create([
+            'name' => 'admin',
+            'email' => 'admin@example.com',
+            'password' => Hash::make(123),
+            'role' => 0,
+        ]);
+        User::factory(1)->create([
+            'name' => 'reader',
+            'email' => 'reader@example.com',
+            'password' => Hash::make(123),
+            'role' => 1,
+        ]);
 
          \App\Models\User::factory(10)->create();
 
