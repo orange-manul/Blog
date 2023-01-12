@@ -7,9 +7,9 @@ add a line
 DB_DATABASE=(your name db)
 
 To add Posts, categories, tags and users
-php artisan migrate --seed
+<b>php artisan migrate --seed</b>
 If it does not work, then:
-php artisan migrate:fresh --seed (Clears database and loads NEW data
+<b>php artisan migrate:fresh --seed</b> (Clears database and loads NEW data)
 
 Join to admin user
 email: admin@example.com
